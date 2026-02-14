@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Beautiful Girl</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --rose-glow: #ff2d55;
+            --blue-deep: #050a18;
+        }
+
+        body {
+            background-color: var(--blue-deep);
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(244, 63, 94, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(30, 58, 138, 0.2) 0%, transparent 40%);
+            font-family: 'Inter', sans-serif;
+            color: #f8fafc;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .rose-gradient-text {
+            background: linear-gradient(to right, #fb7185, #f43f5e, #e11d48);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .photo-frame {
+            position: relative;
+            padding: 8px;
+            background: linear-gradient(135deg, rgba(251, 113, 133, 0.5), rgba(30, 58, 138, 0.5));
+            border-radius: 50%;
+            animation: glow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 10px rgba(244, 63, 94, 0.2); }
+            to { box-shadow: 0 0 30px rgba(244, 63, 94, 0.5); }
+        }
+
+        .cursive {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .floating-heart {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.6;
+            filter: drop-shadow(0 0 5px var(--rose-glow));
+            animation: floatUp 8s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(110vh) scale(0); opacity: 0; }
+            20% { opacity: 0.6; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+
+        .private-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #f43f5e;
+            transition: all 0.3s ease;
+        }
+
+        .private-box:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center py-12 px-4">
+
+    <!-- Ambient Floating Hearts -->
+    <div id="heart-container" class="fixed inset-0 z-0"></div>
+
+    <main class="relative z-10 w-full max-w-xl">
+        <div class="glass-card p-8 md:p-12 text-center">
+            
+            <!-- Header -->
+            <header class="mb-10">
+                <span class="inline-block px-4 py-1 rounded-full bg-rose-500/10 text-rose-400 text-xs font-semibold tracking-widest uppercase mb-4">February 14, 2025</span>
+                <h1 class="Playfair text-4xl md:text-5xl font-bold leading-tight">
+                    Happy <span class="rose-gradient-text">Valentine's</span> Day, Gorgeous
+                </h1>
+            </header>
+
+            <!-- Photo Section -->
+            <div class="flex justify-center mb-10">
+                <div class="photo-frame">
+                    <div class="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-white/20">
+                        <!-- Path points to photo.jpg in the main folder as requested -->
+                        <img src="photo.jpg" alt="My Gorgeous Girl" class="w-full h-full object-cover transform hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1516589174184-c685266e48fc?q=80&w=800&auto=format&fit=crop';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Quotes -->
+            <div class="space-y-8 mb-12">
+                <p class="text-xl md:text-2xl font-light italic text-blue-100/90 leading-relaxed">
+                    "You look <span class="text-rose-400 font-semibold italic">beautiful</span> when you smile, <br> 
+                    and even more when you <span class="text-rose-400 font-semibold italic">shy</span>..."
+                </p>
+
+                <!-- Private Message Area -->
+                <div class="private-box p-6 rounded-r-xl text-left">
+                    <h3 class="text-rose-300 font-semibold text-sm mb-3 uppercase tracking-tighter">A Private Note for You:</h3>
+                    <p class="text-slate-300 italic text-sm md:text-base leading-relaxed">
+                     let Me Tell You a Secret,Kuch Bate Khi Ni Jati, sirf Mehsoos or Nibhayi jati hai . Without any reason, I don't know why i just can't hate the person that i care about , Agr Boli gyi baat ya kiya hua promise rkh nh paye toh for me or in my openion i choose death rather than Live . You said nh ki miss you kutto ko bhi bol deti hu but i'm sure unke liye vo utna hi important hoga jitna mere liye , chahe insaan ho pasuu for them unke liye vo hr ek baat imporatant hai jo kisi apne ne khi hai.....
+                    </p>
+                </div>
+            </div>
+
+            <!-- Playful Ending -->
+            <footer class="border-t border-white/10 pt-8">
+                <p class="text-slate-400 text-xs mb-2 italic">With all the love in the world,</p>
+                <div class="cursive text-3xl text-rose-400">
+                    From your most <span class="text-rose-500">irritating person</span>, 
+                     <span class="text-blue-400">mental</span>, 
+                    and your forever <span class="text-rose-300">Pagal</span> ❤️
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        // Create high-quality floating hearts
+        const heartContainer = document.getElementById('heart-container');
+        const colors = ['#f43f5e', '#fb7185', '#e11d48', '#3b82f6'];
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('floating-heart');
+            
+            // Randomize heart properties
+            const size = Math.random() * 15 + 10 + 'px';
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            heart.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="${color}" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+            
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 5 + 5 + 's';
+            heart.style.left = Math.random() * 100 + '%';
+            
+            heartContainer.appendChild(heart);
+
+            // Cleanup
+            setTimeout(() => {
+                heart.remove();
+            }, 10000);
+        }
+
+        // Start animation loop
+        setInterval(createHeart, 400);
+
+        // Click interaction
+        document.addEventListener('click', (e) => {
+            for(let i=0; i<3; i++) {
+                setTimeout(createHeart, i * 100);
+            }
+        });
+    </script>
+</body>
+</html>
